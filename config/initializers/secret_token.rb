@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Naturecom::Application.config.secret_key_base = '93d8aa057a26cffdebf32fc354790e96c23e35d1f7b4f0c15b5cf6078d5b17e9c42945f24d779dda8bfb87423e13caaffee052fc5a7d1fac0b82898ebd10d680'
+Naturecom::Application.config.secret_key_base = '39b2d37fb375ed235edaabcfae3bde873ced4add4c80a5e3eee80dfda724e7fb08bbf9e38aa37510828bc6043abcf46706cbb7319ca118c41b518a091d1b07a6'
