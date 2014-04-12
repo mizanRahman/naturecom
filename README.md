@@ -59,13 +59,11 @@ Preferences:
 * authorization: cancan
 * form_builder: simple_form
 * starter_app: admin_app
-* rvmrc: true
 * quiet_assets: true
 * local_env_file: figaro
 * better_errors: true
 * ban_spiders: true
 * jsruntime: true
-* github: true
 
 Ruby on Rails
 -------------
