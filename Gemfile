@@ -37,6 +37,7 @@ group :development, :test do
 end
 group :test do
   gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'cucumber-rails', :require=>false
   gem 'database_cleaner', '1.0.1'
   gem 'email_spec'

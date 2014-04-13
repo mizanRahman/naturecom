@@ -54,6 +54,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (0.3.19)
+      capybara (>= 1.0, < 3)
+      launchy
     celluloid (0.15.2)
       timers (~> 1.1.0)
     celluloid-io (0.15.0)
@@ -278,6 +281,7 @@ DEPENDENCIES
   bootstrap-sass
   cancan
   capybara
+  capybara-screenshot
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner (= 1.0.1)
