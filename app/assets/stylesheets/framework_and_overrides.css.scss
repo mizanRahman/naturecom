@@ -46,7 +46,10 @@ img {
 main {
   @extend .container;
   background-color: #eee;
+  background: url('green_gobbler.png');
+  background-repeat: repeat;
   padding-bottom: 80px;
+  padding-top: 20px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }

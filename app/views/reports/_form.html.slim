@@ -1,0 +1,13 @@
+.authform
+  = form_for(@report, :html => { :role => 'form'}) do |f|
+  	-@report.errors.full_messages.each do |msg|
+  		li= msg
+    .form-group
+      = f.label :title
+      = f.text_field :title, :autofocus => true, class: 'form-control'
+    .form-group
+      = f.label :title
+      = f.text_area :content, class: 'form-control'
+  	= f.button :submit, :class=> "btn btn-primary right"
+
+

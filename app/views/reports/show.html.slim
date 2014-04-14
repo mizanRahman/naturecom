@@ -1,0 +1,12 @@
+p#notice = notice
+
+.row
+  .col-xs-8.col-xs-offset-2
+    .panel.panel-default
+      .panel-body
+        h3
+        	legend = @report.title
+        = @report.content
+      .panel-footer
+				= link_to 'Edit', edit_report_path(@report), class: "btn btn-default"
+				= link_to 'all reports', reports_path, class: "btn btn-default"

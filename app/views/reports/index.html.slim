@@ -1,0 +1,12 @@
+br
+- @reports.each do |report|
+  .row
+    .col-xs-8.col-xs-offset-2
+      .panel.panel-default
+        .panel-body
+          legend = link_to report.title, report
+          = report.content
+        .panel-footer
+          = link_to 'Edit', edit_report_path(report)
+
+
