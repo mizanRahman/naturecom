@@ -1,1 +1,1 @@
-json.extract! @report, :id, :title, :content, :created_at, :updated_at
+json.extract! @report,  :title, :area_name, :location, :content, :state, :county, :city, :address, :land_type, :size

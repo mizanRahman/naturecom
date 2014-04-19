@@ -1,4 +1,4 @@
-.authform
+.report-form
   = form_for(@report, :html => { :role => 'form'}) do |f|
   	-@report.errors.full_messages.each do |msg|
   		li= msg
@@ -6,8 +6,33 @@
       = f.label :title
       = f.text_field :title, :autofocus => true, class: 'form-control'
     .form-group
-      = f.label :title
-      = f.text_area :content, class: 'form-control'
+      = f.label "name of the area"
+      = f.text_field :area_name, class: 'form-control'
+    legend= 'Location'
+    .form-group
+      = f.label :state
+      = f.select :state, allStates
+    .form-group
+      = f.label :county
+      = f.select :county, allCountries
+    .form-group
+      = f.label :city
+      = f.select :city, allCities
+    .form-group
+      = f.label :address
+      = f.text_field :address, class: 'form-control'
+
+    .form-group
+      = f.label 'Type of land or habitat'
+      = f.text_field :land_type, class: 'form-control'
+    .form-group
+      = f.label 'General size of area'
+      = f.text_field :size, class: 'form-control'
+    .form-group
+      = f.label 'Description of the area'
+      = f.text_area :content, class: 'form-control', :rows=>16
+    .form-group
+      = f.label :content
   	= f.button :submit, :class=> "btn btn-primary right"
 
 

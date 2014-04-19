@@ -5,8 +5,17 @@ p#notice = notice
     .panel.panel-default
       .panel-body
         h3
-        	legend = @report.title
-        = @report.content
+        legend = @report.title
+        p= @report.area_name
+        p= @report.location
+        p= @report.content
+        p= @report.state
+        p= @report.county
+        p= @report.city
+        p= @report.address
+        p= @report.land_type
+        p= @report.size
+
       .panel-footer
 				= link_to 'Edit', edit_report_path(@report), class: "btn btn-default"
 				= link_to 'all reports', reports_path, class: "btn btn-default"

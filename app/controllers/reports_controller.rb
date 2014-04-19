@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  include ReportsHelper
   before_action :set_report, only: [:show, :edit, :update, :destroy]
 
   # GET /reports
@@ -10,6 +11,7 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.json
   def show
+    puts "mizan: " + @report.area_name
   end
 
   # GET /reports/new
@@ -69,6 +71,8 @@ class ReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def report_params
-      params.require(:report).permit(:title, :content)
+      params.require(:report).permit(:title,:area_name,:location,:content,:state,:county,:city,:address,:land_type,:size)
+
+
     end
 end

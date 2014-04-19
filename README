@@ -1,3 +1,37 @@
+
+Sections:
+Name of area
+
+Location (state, county, city, address) (optional)
+
+Type of land or habitat  (watershed, bluffs, grassland) (drop down or other list choice that would allow multiples
+
+General size of area (drop down of acres, square yards, miles or metric: kilometers)
+
+Description of the area
+
+Important features or aspects of the area
+
+Animals known to use or inhabit the area
+
+Plants within the  area
+
+Historical uses or significance of area
+
+Potential long term benefits of the area to mankind or species
+
+Government agencies with authority over the area
+
+Threat to the area  (road building, housing, commercial, infrastructure such as energy, other) (drop down with “other”
+
+Companies or agencies proposing development
+
+Groups actively working on protecting the area
+
+Main activities the groups are conducting to protect the area
+
+
+
 routes:
 
                   Prefix Verb   URI Pattern                    Controller#Action
