@@ -11,7 +11,6 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.json
   def show
-    puts "mizan: " + @report.area_name
   end
 
   # GET /reports/new
@@ -74,14 +73,7 @@ class ReportsController < ApplicationController
       params.require(:report).permit(
         :title,:area_name,:location,:content,:state,:country,:city,:address,
         :land_type,:size, :features,:animals,
-        :plants,
-        :historical_uses,
-        :long_term_benifits,
-        :government_agencies,
-        :threat,
-        :companies,
-        :groups)
-
-
+        :plants, :historical_uses, :long_term_benifits, :government_agencies,
+        :threat, :companies, :groups)
     end
 end

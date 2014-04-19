@@ -1,0 +1,13 @@
+p
+  strong Caption:
+  = @photo.caption
+p
+  strong Subcaption:
+  = @photo.subcaption
+p
+	strong Photo:
+	= image_tag @photo.image_url(:thumb)  if @photo.image?
+
+= link_to 'Edit', edit_photo_path(@photo)
+'|
+= link_to 'Back', photos_path

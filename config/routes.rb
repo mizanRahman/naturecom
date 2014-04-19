@@ -1,4 +1,6 @@
 Naturecom::Application.routes.draw do
+  resources :photos
+
   resources :reports
 
   root :to => "home#index"

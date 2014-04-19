@@ -13,6 +13,9 @@ gem 'devise'
 gem 'figaro'
 gem 'mongoid', :github=>"mongoid/mongoid"
 gem 'rolify'
+gem "rmagick"
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby

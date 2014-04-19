@@ -1,5 +1,7 @@
 class Report
   include Mongoid::Document
+  has_many :photos, validate: false
+
   field :title
   field :area_name
   field :location
