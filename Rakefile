@@ -4,3 +4,11 @@
 require File.expand_path('../config/application', __FILE__)
 
 Naturecom::Application.load_tasks
+
+desc "push to all remotes"
+task :push do
+	system 'git add .'
+	system 'git commit -m "updated"'
+	system 'git push naturecom master:mizan'
+	system 'git push'
+end

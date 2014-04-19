@@ -14,6 +14,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
+    @report = Report.find(params[:report_id])
     @photo = Photo.new
   end
 
@@ -24,15 +25,21 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(photo_params)
+    puts "creating photo"
+    puts params
+
+    @report = Report.find(params[:report_id])
+    @photo = @report.photos.create!(photo_params)
 
     respond_to do |format|
+      puts @photo
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @photo }
+        puts 'ridericting to: report'
+        format.html { redirect_to @report, notice: 'Photo was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @report }
       else
         format.html { render action: 'new' }
-        format.json { render json: @photo.errors, status: :unprocessable_entity }
+        format.json { render json: @report.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -69,6 +76,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:caption, :subcaption, :image)
+      params.require(:photo).permit(:report_id,:photo, :caption, :subcaption, :image)
     end
 end

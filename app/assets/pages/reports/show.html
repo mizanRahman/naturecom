@@ -1,0 +1,9 @@
+<div ng-init="getReport()" class="container">
+  <a href="#/reports/{{reportId}}/edit" class="btn btn-warning">Edit</a>
+  <button ng-click="deleteReport(reportId)" class="btn btn-danger">Delete</button>
+  <ul>
+    <li ng-repeat="(key, value) in report">
+      <b>{{key}}</b>: {{value}}
+    </li>
+  </ul>
+</div>

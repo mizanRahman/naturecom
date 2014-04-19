@@ -1,0 +1,96 @@
+<div class="container">
+  <h2>Create report</h2>
+
+  <form ng-submit="createReport()">
+    <div class="form-group">
+      <label>Name of area</label>
+      <input type="text" name="area_name" ng-model="report.area_name" class="form-control">
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Location</label>
+      </div>
+      <div class="col-sm-3">
+        <input type="text" name="state" ng-model="report.state" placeholder="State" class="form-control">
+      </div>
+      <div class="col-sm-3">
+        <input type="text" name="country" ng-model="report.country" placeholder="Country" class="form-control">
+      </div>
+      <div class="col-sm-3">
+        <input type="text" name="city" ng-model="report.city" placeholder="City" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="text" name="address" ng-model="report.address" placeholder="Address" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Area type</label>
+      <div ng-repeat="type in land_types">
+        <input type="checkbox"  ng-click="addLandType(type)" ng-true-value="type">
+        {{type}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>ِِArea size</label>
+      </div>
+      <div class="col-lg-2">
+        <input type="text" name="area_size" ng-model="report.area_size" placeholder="Area Size" class="form-control">
+      </div>
+      <div class="col-lg-4">
+        <select ng-model="report.unit_type" class="form-control">
+          <option selected="selected">Acres</option>
+          <option>Square yards</option>
+          <option>Miles</option>
+          <option>Kilometers</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea type="text" name="description" ng-model="report.description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Important features</label>
+      <input type="text" name="features" ng-model="report.features" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Animals</label>
+      <input type="text" name="animals" ng-model="report.animals" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Plants within the area</label>
+      <input type="text" name="plants" ng-model="report.plants" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Historical significance</label>
+      <textarea type="text" name="area_significance" ng-model="report.area_significance" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Future significance</label>
+      <textarea type="text" name="area_future" ng-model="report.area_future" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Authority</label>
+      <input type="text" name="area_authority" ng-model="report.area_authority" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Threats to the area</label>
+      <input type="text" name="threats" ng-model="report.threats" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Companies</label>
+      <input type="text" name="companies" ng-model="report.companies" class="form-control">
+    </div>
+        <div class="form-group">
+      <label>Groups</label>
+      <input type="text" name="groups" ng-model="report.groups" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Activites</label>
+      <input type="text" name="activites" ng-model="report.activites" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>

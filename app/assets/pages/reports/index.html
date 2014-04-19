@@ -1,0 +1,6 @@
+<div class="container" ng-init="getReports()">
+  <a href="#/reports/create" class="btn btn-default">New report</a>
+  <div ng-repeat="report in reports">
+    <a href="#/reports/{{report._id['$oid']}}">report.area_name</a>
+  </div>
+</div>
