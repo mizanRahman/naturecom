@@ -1,21 +1,55 @@
-p#notice = notice
+.row.report-header.text-center
+    h1="Report Header"
+    h2="SubHeader"
 
-.row
-  .col-xs-8.col-xs-offset-2
+.row.report-template
+  .col-xs-8
     .panel.panel-default
       .panel-body
-        h3
-        legend = @report.title
-        p= @report.area_name
-        p= @report.location
+        h3= 'Name of Area: ' + @report.area_name
+        h3= @report.address + ',' + @report.city + ',' + @report.state + ',' + @report.country
+        h4= 'Importance: '+ @report.features
+        hr
         p= @report.content
-        p= @report.state
-        p= @report.county
-        p= @report.city
-        p= @report.address
         p= @report.land_type
         p= @report.size
+        p= @report.features
+        p= @report.animals
+        p= @report.plants
+        p= @report.historical_uses
+        p= @report.long_term_benifits
+        p= @report.government_agencies
+        p= @report.threat
 
       .panel-footer
 				= link_to 'Edit', edit_report_path(@report), class: "btn btn-default"
-				= link_to 'all reports', reports_path, class: "btn btn-default"
+				= link_to 'all reports', reports_path, class: "btn btn-default pull-right"
+    <div class="panel panel-default photo-panel">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <img class="photo" src="holder.js/600x400">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <img class="photo" src="holder.js/600x400">
+            </div>
+        </div>
+
+    </div>
+  .col-xs-4.sidebar
+    <div class="panel panel-default">
+        <div class="panel-body"><h3>News Section</h3></div>
+    </div>
+
+    <div class="panel panel-default photo-panel">
+        <img class="photo" src="holder.js/380x200">
+        <img class="photo" src="holder.js/380x200">
+        <img class="photo" src="holder.js/380x200">
+        <img class="photo" src="holder.js/380x200">
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">News Section</div>
+    </div>
+
+
+<script src="https://raw.githubusercontent.com/imsky/holder/master/holder.js"></script>

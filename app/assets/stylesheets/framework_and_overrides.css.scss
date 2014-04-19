@@ -45,11 +45,11 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
-  background: url('green_gobbler.png');
+  background-color: #fff;
+  // background: url('green_gobbler.png');
   background-repeat: repeat;
   padding-bottom: 80px;
-  padding-top: 20px;
+  // padding-top: 20px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }
@@ -106,4 +106,18 @@ section {
 .report-form{
   max-width: 800px;
   @extend .common-form;
+}
+
+.report-header{
+  background-color: #eee;
+  @extend .text-center;
+}
+.report-template{
+  padding-top: 20px;
+}
+.photo-panel{
+  .photo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

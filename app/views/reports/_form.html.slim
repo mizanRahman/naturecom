@@ -3,9 +3,6 @@
   	-@report.errors.full_messages.each do |msg|
   		li= msg
     .form-group
-      = f.label :title
-      = f.text_field :title, :autofocus => true, class: 'form-control'
-    .form-group
       = f.label "name of the area"
       = f.text_field :area_name, class: 'form-control'
     legend= 'Location'
@@ -14,10 +11,10 @@
       = f.select :state, allStates
     .form-group
       = f.label :county
-      = f.select :county, allCountries
+      = f.select :country, allCountries
     .form-group
       = f.label :city
-      = f.select :city, allCities
+      = f.text_field :city, class: 'form-control'
     .form-group
       = f.label :address
       = f.text_field :address, class: 'form-control'
@@ -30,9 +27,37 @@
       = f.text_field :size, class: 'form-control'
     .form-group
       = f.label 'Description of the area'
-      = f.text_area :content, class: 'form-control', :rows=>16
+      = f.text_area :content, class: 'form-control', :rows=>8
     .form-group
-      = f.label :content
+      = f.label 'Important features or aspects of the area'
+      = f.text_area :features, class: 'form-control', :rows=>6
+    .form-group
+      = f.label 'Animals known to use or inhabit the area'
+      = f.text_area :animals, class: 'form-control', :rows=>6
+    .form-group
+      = f.label 'Plants within the  area'
+      = f.text_area :plants, class: 'form-control', :rows=>6
+    .form-group
+      = f.label 'Historical uses or significance of area'
+      = f.text_area :historical_uses, class: 'form-control', :rows=>6
+    .form-group
+      = f.label 'Potential long term benefits of the area to mankind or species'
+      = f.text_area :long_term_benifits, class: 'form-control', :rows=>6
+
+    .form-group
+      = f.label 'Government agencies with authority over the area'
+      = f.text_area :government_agencies, class: 'form-control', :rows=>6
+
+    .form-group
+      = f.label 'Threat to the area'
+      = f.select :threat, allThreats
+    .form-group
+      = f.label 'Companies or agencies proposing development'
+      = f.text_field :companies, class: 'form-control', :rows=>6
+    .form-group
+      = f.label 'Groups actively working on protecting the area'
+      = f.text_field :groups, class: 'form-control', :rows=>6
+
   	= f.button :submit, :class=> "btn btn-primary right"
 
 

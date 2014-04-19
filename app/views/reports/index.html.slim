@@ -7,8 +7,9 @@ br
     .col-xs-8
       .panel.panel-default
         .panel-body
-          legend = link_to report.title, report
-          = report.content
+          legend = link_to report.area_name, report
+          = report.content[0..160]+'...'
+          = link_to 'Read More', report
         .panel-footer
           = link_to 'Edit', edit_report_path(report)
 

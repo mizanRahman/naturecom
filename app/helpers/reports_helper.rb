@@ -1,4 +1,11 @@
 module ReportsHelper
+  def allThreats
+    threats=['road building',
+     'housing',
+     'commercial',
+     'energy',
+      'other']
+  end
 	def allCities
 		cities = ['New York', 'Sanfrancisco']
 	end
