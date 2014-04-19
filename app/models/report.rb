@@ -22,6 +22,10 @@ class Report
   field :companies
   field :groups
 
+  def location(report)
+    [report.address, report.city, report.state, report.country].reject(&:empty?).join(' ')
+  end
+
 
 
 

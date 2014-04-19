@@ -7,7 +7,7 @@
     .panel.panel-default
       .panel-body
         h3= 'Name of Area: ' + @report.area_name
-        h3= @report.address + ',' + @report.city + ',' + @report.state + ',' + @report.country
+        h3= @report.location(@report)
         h4= 'Importance: '+ @report.features
         hr
         p= @report.content
