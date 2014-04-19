@@ -120,5 +120,16 @@ section {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 2px;
+    position: relative;
+    .caption{
+     position: absolute;
+     top: 0px;
+     left: 0;
+     width: 100%;
+     font-size: 20px;
+     background-color: rgba(10,10,10,0.5);
+     @extend .text-center;
+     padding: 10px 5px;
+    }
   }
 }

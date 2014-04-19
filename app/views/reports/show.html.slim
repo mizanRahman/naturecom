@@ -45,7 +45,9 @@
 
     <div class="panel panel-default photo-panel">
         -@report.photos.each do |photo|
-            = image_tag photo.image_url, :class=>"photo"
+            .photo
+                = image_tag photo.image_url
+                .caption = photo.caption if photo.caption?
     </div>
 
     <div class="panel panel-default">
